@@ -11,7 +11,7 @@
 				hora: d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
 			}
 		},
-		mounted: function() {
+		created: function() {
 			setTimeout(() => {
 				var d = new Date();
 				this.hora = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
