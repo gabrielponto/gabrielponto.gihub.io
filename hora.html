@@ -1,0 +1,15 @@
+<div id="app">
+	<p>{{ hora }}</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app',
+		data: function() {
+			var d = new Date();
+			return {
+				hora: d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
+			}
+		}
+	});
+</script>
