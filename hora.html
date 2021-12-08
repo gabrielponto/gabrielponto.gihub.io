@@ -11,11 +11,17 @@
 				hora: d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
 			}
 		},
+		methods: {
+			updateTime() {
+				setTimeout(() => {
+                                	var d = new Date();
+                               	 	this.hora = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+					this.updateTime();
+                        	}, 1000);
+			}
+		},
 		created: function() {
-			setTimeout(() => {
-				var d = new Date();
-				this.hora = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
-			}, 1000);
+			this.updateTime();
 		}
 	});
 </script>
